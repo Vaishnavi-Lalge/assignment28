@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DOM Manipulation</title>
+    <style>
+        body{
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTh4J0Qxk6oP1iEslQyT72e2JsyNOpaoFk-fg&s");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .app-containar{
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: blue;
+            margin: auto;
+  
+        }
+        .input-box{
+            width: 200px;
+            margin: 10px auto;
+        }
+        .app-heading{
+            text-align: center;
+            
+        }
+        .btn-calculate{
+            width: 250px;
+            height: 50px;
+            margin-top: 50px;
+            color: black;
+
+        }
+        .text-result{
+            margin: 0;
+            padding: 0;
+            font-size: 30px;
+        }
+        .menu {
+        height: 200px;
+        width: 700px;
+        background-color:rgb(146, 214, 237);
+        margin-top: 150px;
+        margin-left: 250px;
+        position: relative;
+        border-radius: 20px; 
+        }  
+           
+    </style>
+</head>
+<body>
+    <div class="menu">
+    <div class="app-containar">
+    <h1 class="app-heading">* Sum Of The Numbers * </h1>
+    <input type="text" class="input-box" id="input-num1"/>
+    <input type="text" class="input-box" id="input-num2"/>
+    <p class="text-result" id="text-result"></p> 
+    <button type="button" class="btn-calculate" onclick="calSum()">
+        Calculate
+    </button>
+</div>
+</div>
+</div>
+
+<script>
+    function calSum()
+    {
+    const num1Element = document.getElementById("input-num1")
+    const num2Element = document.getElementById("input-num2")
+    
+    const sum = parseInt( num1Element.value) + parseInt(num2Element.value)
+
+    const resultElement = document.getElementById("text-result")
+
+    resultElement.innerText = `Sum: ${sum}`
+}
+</script>
+</body>
+</html>
